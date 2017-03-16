@@ -22,6 +22,7 @@ public class ApplicationMain extends JFrame implements KeyListener {
         pack();
         screen = new StartScreen();
         addKeyListener(this);
+        setFocusable(true);
         repaint();
     }
     

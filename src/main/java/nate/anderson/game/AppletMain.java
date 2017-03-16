@@ -20,6 +20,7 @@ public class AppletMain extends Applet implements KeyListener {
         add(terminal);
         screen = new StartScreen();
         addKeyListener(this);
+        setFocusable(true);
         repaint();
     }
 
