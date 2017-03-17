@@ -1,4 +1,6 @@
-package nate.anderson.model;
+package nate.anderson.world;
+
+import nate.anderson.model.Tile;
 
 public class WorldBuilder {
 

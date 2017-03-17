@@ -5,6 +5,7 @@ import java.util.List;
 import asciiPanel.AsciiPanel;
 import nate.anderson.ai.FungusAi;
 import nate.anderson.ai.PlayerAi;
+import nate.anderson.world.World;
 
 public class CreatureFactory {
 

@@ -7,8 +7,8 @@ import java.util.List;
 import asciiPanel.AsciiPanel;
 import nate.anderson.model.Creature;
 import nate.anderson.model.CreatureFactory;
-import nate.anderson.model.World;
-import nate.anderson.model.WorldBuilder;
+import nate.anderson.world.World;
+import nate.anderson.world.WorldBuilder;
 
 public class PlayScreen implements Screen {
 

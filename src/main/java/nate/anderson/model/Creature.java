@@ -3,6 +3,7 @@ package nate.anderson.model;
 import java.awt.Color;
 
 import nate.anderson.ai.CreatureAi;
+import nate.anderson.world.World;
 
 public class Creature {
 

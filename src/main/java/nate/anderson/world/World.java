@@ -1,8 +1,11 @@
-package nate.anderson.model;
+package nate.anderson.world;
 
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
+
+import nate.anderson.model.Creature;
+import nate.anderson.model.Tile;
 
 public class World {
 
