@@ -12,6 +12,7 @@ public class Creature {
 	
 	public int x;
 	public int y;
+	public int z;
 	
 	private char glyph;
 	private Color color;
@@ -79,23 +80,23 @@ public class Creature {
 		return defenseValue;
 	}
 	
-	public void dig(int wx, int wy) {
-		world.dig(wx, wy);
+	public void dig(int wx, int wy, int wz) {
+		world.dig(wx, wy, wz);
 	}
 	
-	public void moveBy (int mx, int my) {
+	public void moveBy (int mx, int my, int mz) {
 		Creature other = world.creature(x + mx,  y + my);
 		
 		if (other == null) {
-			ai.onEnter(x + mx, y + my, world.tile(x + mx,y + my));
+			ai.onEnter(x + mx, y + my, world.tile(x + mx,y + my, z + mz));
 		}
 		else {
 			attack(other);
 		}
 	}
 	
-	public boolean canEnter(int wx, int wy) {
-		return world.tile(wx, wy).isGround() && world.creature(wx, wy) == null;
+	public boolean canEnter(int wx, int wy, int wz) {
+		return world.tile(wx, wy, wz).isGround() && world.creature(wx, wy) == null;
 	}
 	
 	public void update() {

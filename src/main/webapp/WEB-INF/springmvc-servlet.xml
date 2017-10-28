@@ -29,7 +29,7 @@
 		(e.g. "homePage") into a JSP file path (e.g. "/WEB-INF/jsp/homePage.jsp") -->
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
 	    <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
-	    <property name="prefix" value="/WEB-INF/jsp/"/>
+	    <property name="prefix" value="/webapp/WEB-INF/jsp/"/>
 	    <property name="suffix" value=".jsp"/>
 	</bean>
 	

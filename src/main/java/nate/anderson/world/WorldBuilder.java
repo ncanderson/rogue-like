@@ -6,12 +6,14 @@ public class WorldBuilder {
 
 	private int width;
 	private int height;
-	private Tile[][] tiles;
+	private int depth;
+	private Tile[][][] tiles;
 	
-	public WorldBuilder (int width, int height) {
+	public WorldBuilder (int width, int height, int depth) {
 		this.width = width;
 		this.height = height;
-		this.tiles = new Tile[width][height];
+		this.depth = depth;
+		this.tiles = new Tile[width][height][depth];
 	}
 	
 	public WorldBuilder makeCaves() {
@@ -33,7 +35,7 @@ public class WorldBuilder {
 	
 	private WorldBuilder smooth(int times) {
 		
-		Tile[][] tiles2 = new Tile[width][height];
+		Tile[][][] tiles2 = new Tile[width][height][depth];
 		
 		for (int time = 0; time < times; time++) {
 		
@@ -47,7 +49,7 @@ public class WorldBuilder {
 							if (x + ox < 0 || x + ox >= width || y + oy < 0
 								|| y + oy >= height)
 								continue;
-							if (tiles[x + ox][y + oy] == Tile.FLOOR)
+							if (tiles[x + ox][y + oy][z + oz] == Tile.FLOOR)
 								floors ++;
 							else
 								rocks++;
@@ -61,4 +63,29 @@ public class WorldBuilder {
 		return this;
 	}
 	
+	private WorldBuilder createRegions() {
+		regions = new int[width][height][depth];
+		
+		for 
+	}
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
